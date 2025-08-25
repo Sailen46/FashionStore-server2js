@@ -1,5 +1,11 @@
 const productModel = (sequelize, DataTypes) => {
   const Product = sequelize.define("product", {
+    Id: {
+      type: DataTypes.UUID,
+      autoIncrement: true,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4
+    },
     ProductName: {
       type: DataTypes.STRING,
       allowNull: false,
